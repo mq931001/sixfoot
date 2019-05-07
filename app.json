@@ -14,12 +14,24 @@
     "list":[
       {
         "pagePath":"pages/index/index",
-        "text":"首页",
+        "text":"首页"
         
       },
       {
         "pagePath":"pages/logs/logs",
-        "text":"动态",        
+        "text":"活动"      
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "记录"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的"
       }
     ]
   },
