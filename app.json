@@ -1,39 +1,52 @@
 {
+  "usingComponents": {
+    "van-tabbar": "vant/tabbar/index",
+    "van-tabbar-item": "vant/tabbar-item/index",
+    "van-button": "vant/button/index",
+    "my-tabbar":"custom-tab-bar/index"
+  },
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/active/index",
+    "pages/shop/index",
+    "pages/trip/index",
+    "pages/user/index",
+    "pages/tabbar/index"
   ],
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+   "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/active/index",
+        "text": "活动"
+      },
+      {
+        "pagePath": "pages/trip/index",
+        "text": "记录"
+      },
+      {
+        "pagePath": "pages/shop/index",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
-  },
-  "tabBar":{
-    "color": "#DC143C",
-    "list":[
-      {
-        "pagePath":"pages/index/index",
-        "text":"首页"
-        
-      },
-      {
-        "pagePath":"pages/logs/logs",
-        "text":"活动"      
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "记录"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "商城"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "我的"
-      }
-    ]
   },
   "sitemapLocation": "sitemap.json"
 }
