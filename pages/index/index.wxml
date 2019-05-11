@@ -1,6 +1,9 @@
-<!--index.wxml-->
-<view class="container">  
-    <text class="user-motto">{{motto}}</text>
-  <van-button type="default" bind:click="dianji">默认按钮</van-button>
-  <my-tabbar></my-tabbar>
+<view>
+  <swiper indicator-dots="true" indicator-color="#ffffff">
+  <block wx:for="{{imgUrls}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="100%" height="150" />
+    </swiper-item>
+  </block>
+  </swiper>
 </view>

@@ -11,25 +11,31 @@ Component({
    */
   data: {
     selected: 0,  
+    selectedColor:'#00BC71',
     "list": [
       {
         "pagePath": "/pages/index/index",
+        "iconClass":'iconicon_home',
         "text": "首页"
       },
       {
         "pagePath": "/pages/active/index",
+        "iconClass": 'iconicon_event',
         "text": "活动"
       },
       {
         "pagePath": "/pages/trip/index",
+        "iconClass": 'iconjilu',
         "text": "记录"
       },
       {
         "pagePath": "/pages/shop/index",
+        "iconClass": 'iconicon_post',
         "text": "商城"
       },
       {
         "pagePath": "/pages/user/index",
+        "iconClass": 'iconicon_mine',
         "text": "我的"
       }
     ]

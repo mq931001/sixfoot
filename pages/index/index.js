@@ -1,14 +1,19 @@
-//index.js
-//获取应用实例
-const app = getApp()
-
-Page({
-  data: {
-    motto: '首页'   
+Component({
+  pageLifetimes: {
+    show() {
+      if (typeof this.getTabBar === 'function' &&
+        this.getTabBar()) {
+        this.getTabBar().setData({
+          selected: 0
+        })
+      }
+    }
   },
-  dianji() {
-    console.log('1111')
-  },
-  onLoad: function () {
+  data:{
+    imgUrls: [
+      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
+      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
+      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
+    ],
   }
 })
