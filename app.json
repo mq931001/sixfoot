@@ -10,8 +10,7 @@
     "pages/active/index",
     "pages/shop/index",
     "pages/trip/index",
-    "pages/user/index",
-    "pages/1"
+    "pages/user/index"
   ],
   "tabBar": {
     "custom": true,
