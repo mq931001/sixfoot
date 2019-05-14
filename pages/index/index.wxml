@@ -1,9 +1,23 @@
-<view>
+<!-- 轮播图 -->
+<view class='swiper_box'>
   <swiper indicator-dots="true" indicator-color="#ffffff">
-  <block wx:for="{{imgUrls}}" wx:key="*this">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" width="100%" height="150" />
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item bindtap="carouselClick">
+      <image wx:if="{{item.imgs}}" src="{{item.imgs}}" class="slide-image"/>
     </swiper-item>
   </block>
   </swiper>
+</view>
+
+<!-- 线路 -->
+<view class='trip_box'>
+  <view class='left'>
+    <text class='title'>河北青黄岛\群上环绕</text>
+    <text>2019-05-02 徒步 30.21公里</text>
+    <view class='user_box'>
+      <image class='user_img' src='http://foooooot.com/media/upload/selected_route/707178.png'></image>
+      <text class='user_name'>微微吗</text>
+    </view>
+  </view>
+  <image class='right' src='http://foooooot.com/media/upload/selected_route/707178.png'></image>
 </view>

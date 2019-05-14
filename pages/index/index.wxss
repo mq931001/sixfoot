@@ -1,21 +1,40 @@
 /**index.wxss**/
-.userinfo {
+.swiper_box,.swiper_box swiper{
+  width: 100%;
+  height: 400rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 400rpx;
+}
+/* 线路 */
+.trip_box{
+  width: 95%;
+  height: 400rpx;
+  background: red;
+  border-bottom: 1px solid black;
+  margin: 20rpx auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.trip_box .left{
+  /* width: 69%; */
+  height: 100%; 
+  display: flex;
+  flex-direction: column;  
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.trip_box .right{
+  width: 60%;  
+  height: 300rpx;
 }
-
-.usermotto {
-  margin-top: 200px;
+.trip_box .title{
+  font-size: 32rpx;
+}
+.trip_box .user_name{
+  font-size: 22rpx;
+}
+.trip_box .user_img{
+  width: 42rpx;
+  height: 42rpx;
+  border-radius: 100%;
 }
