@@ -9,32 +9,56 @@
 }
 /* 线路 */
 .trip_box{
-  width: 95%;
-  height: 400rpx;
-  background: red;
-  border-bottom: 1px solid black;
-  margin: 20rpx auto;
+  width: 92%;
+  height: 334rpx; 
+  border-bottom: 0.5px solid rgba(26,24,36,0.06);
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
+  padding: 40rpx 0;
+  margin: auto;
 }
-.trip_box .left{
-  /* width: 69%; */
+.trip_box .left{ 
   height: 100%; 
   display: flex;
   flex-direction: column;  
 }
 .trip_box .right{
-  width: 60%;  
-  height: 300rpx;
+  width: 300rpx;  
+  height: 200rpx;
 }
 .trip_box .title{
+  width: 360rpx;
+  font-family: PingFangSC-Medium;
   font-size: 32rpx;
+  color: #1A1824;
+  letter-spacing: 0;
+  text-align: justify;
+  line-height: 44rpx;
 }
 .trip_box .user_name{
+  opacity: 0.6;
+  font-family: PingFangSC-Regular;
   font-size: 22rpx;
+  color: #1A1824;
+  letter-spacing: 0; 
+}
+.trip_box .time{
+  opacity: 0.6;
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #1A1824;
+  letter-spacing: 0;
+  margin-top: 16rpx;
+}
+.trip_box .user_box{
+  margin-top: 22rpx;
+  display: flex;
+  align-items: center;  
 }
 .trip_box .user_img{
-  width: 42rpx;
-  height: 42rpx;
+  width: 50rpx;
+  height: 50rpx;
   border-radius: 100%;
+  margin-right: 16rpx;
 }

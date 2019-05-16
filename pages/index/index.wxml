@@ -1,23 +1,33 @@
+<wxs src="index.wxs" module="tools" />
 <!-- 轮播图 -->
-<view class='swiper_box'>
-  <swiper indicator-dots="true" indicator-color="#ffffff">
-  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
-    <swiper-item bindtap="carouselClick">
-      <image wx:if="{{item.imgs}}" src="{{item.imgs}}" class="slide-image"/>
-    </swiper-item>
-  </block>
-  </swiper>
+<scroll-view
+ scroll-y
+  style="height: 500px;"
+  scroll-with-animation = 'true'
+  bindscrolltolower = 'upper'
+>
+  <view class='swiper_box'>
+    <swiper indicator-dots="true" indicator-color="#ffffff">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item bindtap="carouselClick">
+        <image wx:if="{{item.imgs}}" src="{{item.imgs}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+    </swiper>
 </view>
 
 <!-- 线路 -->
-<view class='trip_box'>
-  <view class='left'>
-    <text class='title'>河北青黄岛\群上环绕</text>
-    <text>2019-05-02 徒步 30.21公里</text>
-    <view class='user_box'>
-      <image class='user_img' src='http://foooooot.com/media/upload/selected_route/707178.png'></image>
-      <text class='user_name'>微微吗</text>
+  <block wx:for="{{tripData}}" wx:key="{{index}}">
+  <view class='trip_box'>
+    <view class='left'>
+      <text class='title'>{{tripData[index].title}}</text>
+      <text class='time'>{{tools.timeSlice(tripData[index].extend.createat)}} 徒步 30.21公里</text>
+      <view class='user_box'>
+        <image class='user_img' src='{{tripData[index].extend.creator.creator_avatar}}'></image>
+        <text class='user_name'>{{tripData[index].extend.creator.creator_name}}</text>
+      </view>
     </view>
+    <image class='right' src='{{tripData[index].imgs}}'></image>
   </view>
-  <image class='right' src='http://foooooot.com/media/upload/selected_route/707178.png'></image>
-</view>
+  </block>
+</scroll-view>
