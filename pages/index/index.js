@@ -15,7 +15,7 @@ Component({
     tripData:[],
     tripObj:{
       page_num : 0,
-      page_size: 20
+      page_size: 40
     }
   },
   lifetimes: {
@@ -63,8 +63,7 @@ Component({
             _this.setData({
               imgUrls: _this.data.imgUrls,
               tripData: _this.data.tripData
-            }) 
-            console.log(_this.data.tripData)
+            })             
           }
         },
         fail: function (res) {
@@ -82,6 +81,14 @@ Component({
         title: '点击轮播图',
       })
     },
+    toTripInfo(e){
+     
+      var id = e.currentTarget.dataset.id
+      wx.navigateTo({
+        url: '/pages/trip_info/index?id=' + id
+      })
+    },
+
     // 滚动事件，滚动到底部
     upper(e){
       this.data.tripObj.page_num++;

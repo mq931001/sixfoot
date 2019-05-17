@@ -8,5 +8,8 @@ Component({
         })
       }
     }
+  },
+  data: {
+    web_src: "https://www.foooooot.com", //webview内嵌的url
   }
 })
