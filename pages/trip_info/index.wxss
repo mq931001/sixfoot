@@ -1,1 +1,136 @@
-/* pages/trip_info/index.wxss */
+.userinfo{
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 5px #E9E9E9;
+}
+.title {
+    padding-top: 20px;
+}
+.title b {
+    font-size: 16px;
+    color: #333333;   
+    word-break: break-all;
+    font-weight: 800;
+}
+.title, .username {
+    width: 91%;
+    margin: auto;
+}
+.username {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-top: 37px;
+}
+.username .userimg {
+    display: flex;
+    align-items: center;
+}
+.username image {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.userimg text {
+    font-size: 14px;
+    color: #333333;
+    margin-left: 15px;
+    font-family: PingFang-SC-Regular;
+    line-height: 20px;
+}
+.username .number {
+    display: flex;
+    align-items: center;
+    background: #F4F4F4;
+    border-radius: 100px;
+    height: 24px;
+    padding: 0 15px;
+}
+.number text {
+    font-size: 14px;
+    color: #333333;
+}
+
+.trip {
+    width: 100%;
+    background-color: white;
+    margin-top:10px;
+    box-shadow: 0 0 5px #E9E9E9;
+}
+.triptitle {
+    width: 91%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+.tripicon {
+    width: 3px;
+    height: 14px;
+    background-image: linear-gradient(52deg, #1FDAD0 0%, #46E781 100%);
+}
+.triptitle text {
+    font-size: 14px;
+    color: #333333;
+    margin-left: 5px;
+    font-family: PingFang-SC-Semibold;
+    line-height: 20px;
+}
+.tripinfo {
+    width: 91%;
+    margin: auto;
+    font-size: 14px;
+    color: #666666;
+}
+.tripinfo .first {
+    display: flex;
+    align-items: center;
+    margin-top:10px;
+}
+.first>view {
+    display: flex;
+    align-items: center;
+    font-family: PingFang-SC-Regular;
+}
+.first view:nth-child(1) {
+    width:190px;
+}
+.first>view>span:nth-child(2) {
+    margin-left: 2px;
+}
+#triptime {
+    margin-left: 5px;
+}
+.triplist {
+    width: 91%;
+    height: 70.5px;
+    margin: auto;
+    margin-top: 15px;
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+}
+.triplist ul {
+    height: 70.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.triplist ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #F0F0F0;
+    padding-right: 14px;
+}
+.triplist ul li p:nth-child(1) {
+    font-size: 22px;
+    color: #20C698;
+    line-height: 30px;
+}
+.triplist ul li p:nth-child(2) {
+    font-size: 12px;
+    color: #666666;
+    padding-top: 3px;
+    line-height: 16px;
+}

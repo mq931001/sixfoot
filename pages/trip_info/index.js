@@ -31,7 +31,7 @@ Page({
   getImgAjax:function() {
     var _this = this
     wx.request({
-      url: 'https://www.foooooot.com/api/v3/trip/' + _this.data.tripId + '/footprint/',
+      url: 'https://www.foooooot.com/api/v3/trip/66/?richtxt=1/',
       data: _this.data.tripObj,
       success: function (res) { console.log(res) },
       fail: function (res) { },
