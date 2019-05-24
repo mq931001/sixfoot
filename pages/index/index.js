@@ -33,7 +33,7 @@ Component({
         title: '加载中',
       })
       wx.request({
-        url: 'https://test.foooooot.com/api/v3/feed/home_new/', //上线的话必须是https，没有appId的本地请求貌似不受影响 
+        url: 'https://www.foooooot.com/api/v3/feed/home_new/', //上线的话必须是https，没有appId的本地请求貌似不受影响 
         method: 'get', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT 
         data:{
           page_num: obj.page_num,

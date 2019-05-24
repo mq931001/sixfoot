@@ -8,16 +8,15 @@ polyline="{{polyline}}"
 >
 </map>
 <view class="userinfo">
-    <view class="title">
-        <text class="titletext">重访潭柘寺</text>
+    <view class="title">   
+        <text class="titletext">{{tripInfo.name}}</text>
     </view>
     <view class="username">
         <view class="userimg">
-            <image src="https://image.foooooot.com/avatar/853000/2019/03/18/120418_HT6TK.jpg-.avatar.mini" alt="头像">  </image>
-          
-            <text>是多少</text>
+            <image src="{{tripInfo.creator_avatar}}" alt="头像">  </image>
+            <text>{{tripInfo.creator}}</text>
         </view>
-        <view class="numtexter"><text>#1924266</text></view>
+        <view class="number"><text>#{{tripInfo.id}}</text></view>
     </view>
 </view>
 
@@ -30,8 +29,8 @@ polyline="{{polyline}}"
         <view class="first">
             <view>
                 <span class="icon-icon_sportstype_hiking" style="font-size: 0.18rem;color: #31E1AC"></span>
-                <span>徒步：</span>
-                <span id="triptime">2008-06-29 12:54</span>
+                <span>{{tools.tripTypeSlice(tripInfo.activity)}}：</span>
+                <span id="triptime">{{tools.timeSlice(tripInfo.occurtime)}}</span>
             </view>
             <view>
                 <span class="icon-icon_difficult" style="font-size: 0.18rem"></span>
@@ -43,26 +42,26 @@ polyline="{{polyline}}"
         <view class="first">
             <view>
                 <span class="icon-icon_trip_start" style="font-size: 0.18rem"></span>
-                <span class="stargps">北京 北京市区</span>
+                <span class="stargps">{{tripInfo.start_place_name}}</span>
             </view>
             <view>
                 <span class="icon-icon_trip_end" style="font-size: 0.18rem"></span>
-                <span class="endgps">北京 北京市区</span>
+                <span class="endgps">{{tripInfo.end_place_name}}</span>
             </view>
         </view>
     </view>
     <view class="triplist">
         <ul>
             <li>
-                <p class="yongshi">111</p>
+                <p class="yongshi">{{tools.durationTime(tripInfo.duration)}}</p>
                 <p>用时</p>
             </li>
             <li>
-                <p class="distance">59.7</p>
+                <p class="distance">{{tools.tripLengths(tripInfo.distance)}}</p>
                 <p>里程(公里)</p>
             </li>
             <li>
-                <p>1053</p>
+                <p>{{tripInfo.accum_uphill}}</p>
                 <p>上升(米)</p>
             </li>
             <li class="moredata">

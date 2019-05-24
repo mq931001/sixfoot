@@ -10,6 +10,7 @@ Page({
       page_num: 0,
       page_size: 40
     },
+    tripInfo:{'1':'22'},
     polyline: [{
       points: [],
       color: '#FF0000DD',
@@ -24,6 +25,7 @@ Page({
   onLoad: function(options) {
     console.log(options)
     this.data.tripId = options.id
+    this.getImgAjax()  //获取线路信息
     this.getTripAjax()
   },
 
@@ -31,16 +33,24 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
+    
   },
   // 获取线路数据
   getImgAjax: function() {
     var _this = this
     wx.request({
-      url: 'https://www.foooooot.com/api/v3/trip/66/?richtxt=1/',
+      url: 'https://www.foooooot.com/api/v3/trip/'+_this.data.tripId+'/?richtxt=1/',
       data: _this.data.tripObj,
       success: function(res) {
         console.log(res)
+        if(res.data.ret){
+          var data = res.data.data
+          _this.data.tripInfo = data
+          _this.setData({
+            tripInfo:_this.data.tripInfo
+          })
+          console.log(_this.data.tripInfo)
+        }
       },
       fail: function(res) {},
       complete: function(res) {},
@@ -50,10 +60,9 @@ Page({
   getTripAjax: function() {
     var _this = this
     wx.request({
-      url: 'https://www.foooooot.com/trip/66/offsettrackjson/',
+      url: 'https://www.foooooot.com/trip/'+_this.data.tripId+'/offsettrackjson/',
       method: 'GET',
-      success: function(res) {
-        console.log(res)
+      success: function(res) {        
         var data = res.data
         for (var i = 0; i < data.length; i++) {
           _this.data.polyline[0].points.push({

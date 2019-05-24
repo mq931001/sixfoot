@@ -5,14 +5,13 @@
     "van-button": "vant/button/index",
     "my-tabbar": "custom-tab-bar/index"
   },
-  "pages": [
-    "pages/trip_info/index",
+  "pages": [   
     "pages/index/index",
     "pages/active/index",
     "pages/shop/index",
     "pages/trip/index",
-    "pages/user/index"
-   
+    "pages/user/index",
+    "pages/trip_info/index"   
   ],
   "tabBar": {
     "custom": true,

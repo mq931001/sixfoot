@@ -73,13 +73,39 @@ function tripTypeSlice(data){
 
 // 初始化里程
 function tripLength(data){
-  console.log(data)
-  return data.toFixed(2)+'公里'
+  var num = data.toFixed(2)
+  return num
+}
+function tripLengths(data){
+  var num = parseInt(data)
+  return num
+}
+
+function durationTime(seconds) {  
+  seconds = parseInt(seconds)     
+  var min = Math.floor(seconds / 60),
+      second = seconds % 60,
+      hour, newMin;
+
+  if (min >=  60) {
+      hour = Math.floor(min / 60);
+      newMin = min % 60;
+      var teshu = ((hour * 60 + newMin) / 60).toFixed(2); 
+  }else{
+      teshu = (min / 60).toFixed(2); 
+  }
+
+  if (second < 10) { second = '0' + second;}
+  if (min < 10) { min = '0' + min;}       
+  if(newMin < 10) {newMin = '0' + newMin}       
+  return time = hour? (hour + ':' + newMin + ':' + second) : (min + ':' + second);
 }
 
 
 module.exports = {
   timeSlice: timeSlice,
   tripTypeSlice: tripTypeSlice,
-  tripLength: tripLength
+  tripLength: tripLength,
+  durationTime:durationTime,
+  tripLengths:tripLengths
 }
