@@ -134,3 +134,31 @@
     padding-top: 3px;
     line-height: 16px;
 }
+
+.box {
+    width: 100%;
+    background-color: white;
+    margin-top:10px;
+    box-shadow: 0 0 5px #E9E9E9;
+    padding-bottom: 10px;
+}
+.nodata {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nodata image {
+    width: 160px;
+    height: 160px;
+}
+.nodata text {
+    margin-top:15px;
+    font-size: 12px;
+    color: #B0B0B0;
+}
+
+#map{
+  width: 100%;
+  height: 210px;
+}

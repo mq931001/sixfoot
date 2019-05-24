@@ -1,3 +1,12 @@
+<wxs src="../../utils/util.wxs" module="tools" />
+<map 
+id='map'
+longitude="116.502009"
+latitude='39.925266'
+markers="{{markers}}"
+polyline="{{polyline}}"
+>
+</map>
 <view class="userinfo">
     <view class="title">
         <text class="titletext">重访潭柘寺</text>
@@ -62,14 +71,18 @@
             </li>
         </ul>
     </view>
-    <view class="triptext">
-        <p class="textclick line3">
-            <span class="txttextox"></span>
-        </p>
-        <view style="text-align: center;color: #20C698;margin-top: 0.1rem">
-            <span class="toggle_texttn down">全部展开</span><span class="icon-icon_downarrow downicon"></span>
-        </view>
-    </view>
 </view>
 
+<view class="box">
+  <view class='triptitle foottitle'>
+    <view class='tripicon'></view>
+    <text>脚印</text>
+  </view>
+  <view class='footbox'>
+    <view class='nodata'>
+      <image src='https://www.foooooot.com/static/mobile/img/share/nodata.png'></image>
+      <text>没有留下脚印</text>
+    </view>
+  </view>
+</view>
 

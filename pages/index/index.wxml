@@ -1,4 +1,4 @@
-<wxs src="index.wxs" module="tools" />
+<wxs src="../../utils/util.wxs" module="tools" />
 <!-- 轮播图 -->
 <view class='box'>
 <scroll-view
