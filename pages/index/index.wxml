@@ -9,7 +9,7 @@
   <view class='swiper_box'>
     <swiper indicator-dots="true" indicator-color="#ffffff">
     <block wx:for="{{imgUrls}}" wx:key="{{index}}">
-      <swiper-item bindtap="carouselClick">
+      <swiper-item bindtap="carouselClick" data-id='{{item.link_data}}'>
         <image wx:if="{{item.imgs}}" src="{{item.imgs}}" class="slide-image"/>
       </swiper-item>
     </block>

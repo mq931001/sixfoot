@@ -73,15 +73,37 @@ polyline="{{polyline}}"
 </view>
 
 <view class="box">
-  <view class='triptitle foottitle'>
+  <view class='triptitle foottitle'  >
     <view class='tripicon'></view>
-    <text>脚印</text>
+    <text>脚印{{}}</text>
   </view>
-  <view class='footbox'>
-    <view class='nodata'>
-      <image src='https://www.foooooot.com/static/mobile/img/share/nodata.png'></image>
-      <text>没有留下脚印</text>
+  <view class='nodata'wx:if="{{imgData.length == 0}}">
+    <image src='https://www.foooooot.com/static/mobile/img/share/nodata.png'></image>
+    <text>没有留下脚印</text>
+  </view>
+  <view class='footbox' wx:else>
+    <view class="foot" hover-class="none" hover-stop-propagation="false"
+     wx:for="{{imgData}}" wx:key="{{index}}"
+    >
+        <view class="num"><text>{{index + 1}}</text></view>
+        <view class='footimg'><image src='{{item.gallery_url}}'></image></view>
+        <text class='foottext'>{{item.title}}</text>
+        <view class='footlist'>
+          <ul>
+            <li>
+              <span class="icon-icon_time2">{{tools.timeSlice(item.edit_timestamp)}}</span>             
+            </li>
+            <li>
+              <span class='icon-icon_sportstype_climbing'>{{tools.tripLengths(item.elevation)}}米</span>              
+            </li>
+            <li>
+              <span class='icon-icon_location'>{{item.place_name}}</span>             
+            </li>
+          </ul>
+        </view>
+        <view class='footline'></view>
     </view>
+   
   </view>
 </view>
 

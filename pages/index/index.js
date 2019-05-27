@@ -76,13 +76,13 @@ Component({
     },
 
     // 轮播图点击事件
-    carouselClick(){
-      wx.showToast({
-        title: '点击轮播图',
+    carouselClick(e){
+      var id = e.currentTarget.dataset.id
+      wx.navigateTo({
+        url: '/pages/trip_info/index?id=' + id
       })
     },
-    toTripInfo(e){
-     
+    toTripInfo(e){     
       var id = e.currentTarget.dataset.id
       wx.navigateTo({
         url: '/pages/trip_info/index?id=' + id
@@ -90,10 +90,9 @@ Component({
     },
 
     // 滚动事件，滚动到底部
-    upper(e){
+    onReachBottom(){
       this.data.tripObj.page_num++;
-      this.getAjax(this.data.tripObj)
-      
+      this.getAjax(this.data.tripObj)      
     }
   }
 })
