@@ -24,11 +24,11 @@
       <text class='time'>{{tools.timeSlice(tripData[index].extend.createat)}}  {{tools.tripTypeSlice(tripData[index].extend.activity)}}   {{tools.tripLength(tripData[index].extend.length)}}
 </text>
       <view class='user_box'>
-        <image class='user_img' src='{{tripData[index].extend.creator.creator_avatar}}'></image>
+        <image class='user_img' src='{{tripData[index].extend.creator.creator_avatar}}' lazy-load='true'></image>
         <text class='user_name'>{{tripData[index].extend.creator.creator_name}}</text>
       </view>
     </view>
-    <image class='right' src='{{tripData[index].imgs}}'></image>
+    <image class='right' src='{{tripData[index].imgs}}'  lazy-load='true' bindload="onImageLoad"></image>
   </view>
   </block>
 </scroll-view>

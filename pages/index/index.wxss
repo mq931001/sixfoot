@@ -72,5 +72,5 @@
 }
 
 .trip_box:nth-last-child(1){
-  margin-bottom: 200rpx;
+  margin-bottom: 100rpx;
 }

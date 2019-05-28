@@ -1,15 +1,10 @@
 {
-  "usingComponents": {
-    "van-tabbar": "vant/tabbar/index",
-    "van-tabbar-item": "vant/tabbar-item/index",
-    "van-button": "vant/button/index",
-    "my-tabbar": "custom-tab-bar/index"
-  },
+  "usingComponents": {},
   "pages": [   
+    "pages/trip/index",
     "pages/index/index",
     "pages/active/index",
-    "pages/shop/index",
-    "pages/trip/index",
+    "pages/shop/index",   
     "pages/user/index",
     "pages/trip_info/index"   
   ],
@@ -46,6 +41,11 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取位置用于记录轨迹"
+    }
   },
   "sitemapLocation": "sitemap.json"
 }

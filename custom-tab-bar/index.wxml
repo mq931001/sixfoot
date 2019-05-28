@@ -1,6 +1,6 @@
-<cover-view class="tab-bar">
-  <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
-    <cover-view class='icomoon  {{item.iconClass}} ' style="color: {{selected === index ? selectedColor : color}}"></cover-view>
-    <cover-view style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</cover-view>
-  </cover-view>
-</cover-view>
+<view class="tab-bar">
+  <view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <view class='icomoon  {{item.iconClass}} ' style="color: {{selected === index ? selectedColor : color}}"></view>
+    <view style="color: {{selected === index ? selectedColor : color}}" class='text'>{{item.text}}</view>
+  </view>
+</view>

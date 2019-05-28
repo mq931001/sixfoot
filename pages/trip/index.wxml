@@ -1,3 +1,11 @@
 <!--pages/trip/index.wxml-->
-<text>pages/trip/index.wxml</text>
-
+<map 
+id='map'
+longitude="{{longitudeData}}"
+latitude='{{latitudeData}}'
+show-location = 'true'
+show-compass = 'true'
+enable-overlooking = 'true'
+enable-rotate = 'true'
+>
+</map>

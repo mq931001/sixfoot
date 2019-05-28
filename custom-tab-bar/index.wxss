@@ -1,4 +1,4 @@
-@import '../styles/iconfont.wxss';
+@import '/styles/iconfont.wxss';
 .tab-bar {
   position: fixed;
   bottom: 0;
@@ -17,7 +17,7 @@
   align-items: center;
   flex-direction: column;
 }
-.tab-bar-item cover-view {
+.tab-bar-item .text {
   font-size: 28rpx;
   color: #333333;
 }

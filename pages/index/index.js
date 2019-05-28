@@ -87,12 +87,15 @@ Component({
       wx.navigateTo({
         url: '/pages/trip_info/index?id=' + id
       })
-    },
-
+    },    
     // 滚动事件，滚动到底部
     onReachBottom(){
       this.data.tripObj.page_num++;
       this.getAjax(this.data.tripObj)      
-    }
+    },
+    // 图片加载完成事件
+    onImageLoad(e) {
+      
+    },
   }
 })

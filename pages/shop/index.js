@@ -5,7 +5,7 @@ Component({
         this.getTabBar()) {
         this.getTabBar().setData({
           selected: 3
-        })
+        })        
       }
     }
   }
