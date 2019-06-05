@@ -1,1 +1,7 @@
 /* pages/shop/index.wxss */
+.btn-area{
+  margin-bottom: 50px;
+}
+#myVideo{
+  width: 100%;
+}

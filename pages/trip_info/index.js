@@ -19,8 +19,7 @@ Page({
     polyline: [{
       points: [],
       color: '#FF0000DD',
-      width: 4,
-      borderWidth: 10,
+      width: 4,    
     }],
   },
 
@@ -123,6 +122,14 @@ Page({
   onReachBottom(){
     this.data.imgObj.page_num++;
     this.getImgAjax(this.data.tripObj) 
+  },
+
+  onShareAppMessage: function () {  
+    return {
+      title: '线路详情',
+      path: '/pages/trip_info/index?id='+this.data.tripId,
+      success: function (res) { }
+    }
   }
 
 })

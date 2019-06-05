@@ -3,9 +3,17 @@
 id='map'
 longitude="{{longitudeData}}"
 latitude='{{latitudeData}}'
+polyline="{{polyline}}"
 show-location = 'true'
 show-compass = 'true'
 enable-overlooking = 'true'
 enable-rotate = 'true'
 >
 </map>
+<view class="flex flex-direction {{controlButton === false ? 'none' : ''}}" >
+  <button class="cu-btn bg-green lg" bindtap='startGps'>开始记录{{controlButton}}</button>  
+</view>
+<view class="flex button {{controlButton === true ? 'none' : ''}}">
+  <button class="cu-btn bg-red flex-sub padding-sm" bindtap='suspendGps'>暂停记录</button>  
+  <button class="cu-btn bg-blue flex-sub padding-sm" bindtap='uploadGps'>结束并上传</button>  
+</view>

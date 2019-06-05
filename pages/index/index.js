@@ -78,6 +78,14 @@ Component({
     // 轮播图点击事件
     carouselClick(e){
       var id = e.currentTarget.dataset.id
+      var type = e.currentTarget.dataset.type
+      console.log(type)
+      if (type !== 3) {
+        wx.showToast({
+          title: '点击活动',
+        })
+        return false
+      } 
       wx.navigateTo({
         url: '/pages/trip_info/index?id=' + id
       })
@@ -86,7 +94,8 @@ Component({
       var id = e.currentTarget.dataset.id
       wx.navigateTo({
         url: '/pages/trip_info/index?id=' + id
-      })
+      })     
+     
     },    
     // 滚动事件，滚动到底部
     onReachBottom(){

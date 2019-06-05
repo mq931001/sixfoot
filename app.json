@@ -1,11 +1,12 @@
 {
   "usingComponents": {},
   "pages": [   
-    "pages/trip/index",
+    
     "pages/index/index",
     "pages/active/index",
     "pages/shop/index",   
     "pages/user/index",
+    "pages/trip/index",
     "pages/trip_info/index"   
   ],
   "tabBar": {

@@ -32,7 +32,7 @@ Component({
       {
         "pagePath": "/pages/shop/index",
         "iconClass": 'iconicon_post',
-        "text": "商城"
+        "text": "站位"
       },
       {
         "pagePath": "/pages/user/index",
