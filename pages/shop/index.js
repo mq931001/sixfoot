@@ -56,7 +56,7 @@ Component({
     bindSendDanmu: function () {
       videoContext.sendDanmu({
         text: this.inputValue,
-        color: this.getRandomColor
+        color: this.getRandomColor()
       })
     }
   },
